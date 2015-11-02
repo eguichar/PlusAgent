@@ -16,7 +16,7 @@ https://en.wikipedia.org/wiki/Email_address#Sub-addressing
 
 Usage:
 -----
-1. Build using instructions here: https://kill-9.me/524/exchange-email-plussing-transport-agent
+1. Build from source or download pre-compiled DLLS from here: https://kill-9.me/524/exchange-email-plussing-transport-agent 
 
 2. Copy the compiled .dll file to C:\CustomAgents\PlusAgent.dll
 
