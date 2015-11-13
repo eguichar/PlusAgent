@@ -33,6 +33,12 @@ namespace PlusAgent
 
         public void RcptToHandler(ReceiveCommandEventSource source, RcptCommandEventArgs rcptArgs)
         {
+            // Check to see if this is an internal message
+            if (!rcptArgs.SmtpSession.IsExternalConnection)
+            {
+                return;
+            }
+            
             string[] parts = rcptArgs.RecipientAddress.LocalPart.Split('+');
 
             if (parts.Length < 1 || (_addressBook == null) || (_addressBook.Find(rcptArgs.RecipientAddress) != null))
